@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Our Team — YantraOne</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    body{ font-family:'Inter',system-ui,Helvetica,Arial; background:#f8fafc; color:#111827; }
+    .avatar-ring{ width:220px; height:220px; border-radius:9999px; display:block; margin:0 auto; box-shadow:0 4px 24px rgba(15,23,42,0.06); background:linear-gradient(135deg,#06b6d4, #6366f1); padding:6px; }
+    .avatar-inner{ border-radius:9999px; width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:white; }
+  </style>
+</head>
+<body>
+
+  <!-- header (same structure as index) -->
+  <header class="bg-white shadow-sm sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-3">
+          <a href="index.html"><img src="YantraOne-logo.png" alt="YantraOne" class="h-10 w-auto"></a>
+          <div>
+            <div class="text-xl font-bold"><span class="text-yantraIndigo">YANTRA</span><span class="text-yantraTeal">ONE</span></div>
+            <div class="text-xs text-gray-500">Technologies</div>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="index.html" class="text-gray-700 hover:text-yantraIndigo">← Back to Home</a>
+        </nav>
+
+        <div class="md:hidden">
+          <button id="menu-btn-team" class="p-2 text-gray-600"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero / Page title -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h1 class="text-3xl font-extrabold mb-2">Our Team</h1>
+      <p class="text-gray-600 mb-8">Meet the visionary behind YantraOne</p>
+
+      <!-- Team card (single member) -->
+      <div class="bg-white rounded-2xl p-8 max-w-xl mx-auto shadow-xl">
+        <div class="avatar-ring mb-6">
+          <div class="avatar-inner">
+            <!-- replace with your profile image if you have -->
+            <img src="YantraOne-logo.png" alt="Vishal Kumar" class="w-40 h-40 object-cover rounded-full">
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-extrabold mb-1">Vishal Kumar</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">Founder & CEO, YantraOne</p>
+
+        <p class="text-gray-700 text-sm leading-relaxed">
+          I am Vishal Kumar, the founder of YantraOne and a student of Dr. B. R. Ambedkar School of Specialized Excellence.
+          With a deep passion for robotics, AI, and innovation, I started this journey to empower young minds with futuristic skills and practical knowledge.
+          My vision is to make technology accessible to every student and creator, so together we can build a smarter and sustainable India.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="font-semibold">YantraOne Technologies</p>
+      <p class="text-sm text-gray-400 mt-2">&copy; <span id="yr2"></span> YantraOne. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/918810543535" class="whatsapp-float" target="_blank" aria-label="WhatsApp">💬</a>
+  <style>
+    .whatsapp-float{ position:fixed; right:20px; bottom:20px; background:#25D366; color:#fff; padding:12px 14px; border-radius:9999px; z-index:9999; text-decoration:none; }
+  </style>
+
+  <!-- scripts -->
+  <script>
+    lucide.createIcons();
+    document.getElementById('yr2').textContent = new Date().getFullYear();
+
+    // mobile menu toggle (team page)
+    const btn = document.getElementById('menu-btn-team');
+    btn && btn.addEventListener('click', () => alert('Use Back to Home link or open main page navigation.'));
+  </script>
+</body>
+</html>
